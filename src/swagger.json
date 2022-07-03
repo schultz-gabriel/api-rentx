@@ -1,0 +1,77 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "RentalX Documentation",
+        "description": "My first complete Node project studying on Rocketseat.",
+        "version": "1.0.0",
+        "contact":{
+            "email": "gabriel.bridi2008@hotmail.com"
+        }
+    },
+    "paths": {
+        "/categories": {
+            "post": {
+                "tags": ["Category"],
+                "sumary": "",
+                "description": "",
+                "requestBody":{
+                    "content": {
+                        "application/json":{
+                            "schema":{
+                                "type": "object",
+                                "properties":{
+                                    "name":{
+                                        "type": "string"
+                                    },
+                                    "description": {
+                                        "type":"string"
+                                    }
+                                },
+                                "example":{
+                                    "name": "New category",
+                                    "description": "Category description"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    },
+                    "500": {
+                        "description": "Already exists"
+                    }
+                }
+            },
+            "get":{
+                "tags":["Category"],
+                "summary": "",
+                "description": "",
+                "responses":{
+                    "200":{
+                        "description": "Sucess",
+                        "content": {
+                            "application/json":{
+                                "schema":{
+                                    "type": "array",
+                                    "items":{
+                                        "type": "object",
+                                        "properties":{
+                                            "name":{
+                                                "type":"string"
+                                            },
+                                            "description":{
+                                                "type":"string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
