@@ -39,8 +39,8 @@
                     "201": {
                         "description": "Created"
                     },
-                    "500": {
-                        "description": "Already exists"
+                    "400": {
+                        "description": "Already exists!"
                     }
                 }
             },
@@ -69,6 +69,9 @@
                                 }
                             }
                         }
+                    },
+                    "400":{
+                        "Description": "User isn't adm!"
                     }
                 }
             }
