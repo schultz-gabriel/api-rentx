@@ -1,8 +1,9 @@
-import { SpecificationsRepository } from '../../repositories/implementations/SpecificationsRepository';
+// eslint-disable-next-line max-len
+// import { SpecificationsRepository } from '../../repositories/implementations/SpecificationsRepository';
 import { CreateSpecificationUseCase } from './CreateSpecificationUseCase';
 import { CreateSpecificationController } from './CreateSpecificationController';
 
-const specificationsRepository = SpecificationsRepository.getInstance();
+const specificationsRepository = null;
 
 const createSpecificationUseCase = new CreateSpecificationUseCase(specificationsRepository);
 
